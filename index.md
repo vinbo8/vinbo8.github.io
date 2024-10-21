@@ -7,15 +7,15 @@ layout: default
 
 I am a freelance researcher and writer living between Berlin and Oslo. My academic interests focus, broadly, on the transformations in society, spurred on by the development and deployment of contemporary artificial intelligence. My lens into this is predominantly through an an analysis of the political economy of these developments.
 
-I also have a PhD in multilingual language technology from the University of Oslo; my PhD also included a research visit to the University of Copenhagen. My dissertation was at the intersection of multilinguality in language models and their interpretability. I attempted to critique the capacities of contemporary artificial intelligence to simulate human language, particularly from the perspective of non-English languages.
+I have a PhD in multilingual language technology from the University of Oslo; my PhD included a research visit to the University of Copenhagen. My dissertation was at the intersection of multilinguality in language models and their interpretability. I attempted to critique the capacities of contemporary artificial intelligence to simulate human language, particularly from the perspective of non-English languages.
 
-Aside from my academic work, I am a musician. I design audio for live environments, work as a sound engineer on a voluntary basis, and work on film scoring.
+Aside from my academic work, I am a musician. I design audio for live environments, score films, and work as a sound engineer on a volunteer basis. 
 
-To get in touch, lrite me at vinit [dot] ravishankar [at] gmail [dot] com.
-
+To get in touch, write me at vinit [dot] ravishankar [at] gmail [dot] com.
 
 ## publications
 
+* Vinit Ravishankar. _Transcending Autonomism_. The Left Berlin (2024).
 * Vinit Ravishankar. _Anti-Wagenknecht_. The Left Berlin (2024).
 * Vinit Ravishankar, Joakim Nivre. _The Effects of Corpus Choice and Morphosyntax on Multilingual Space Induction._ Findings of EMNLP (2022)
 * Raul Vázquez, Hande Celikkanat, Vinit Ravishankar, Mathias Creutz, Jörg Tiedemann. _A Closer Look at Parameter Contributions When Training Neural Language and Translation Models._ COLING (2022) 
