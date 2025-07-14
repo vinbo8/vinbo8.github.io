@@ -1,0 +1,25 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import media from "../content/media.json"
+import confs from "../content/confs.json"
+import papers from "../content/papers.json"
+import Media from "@components/Media.astro"
+import Confs from "@components/Confs.astro"
+import Papers from "@components/Papers.astro"
+
+---
+
+<PageLayout title="vinit - research">
+  <Container>
+    <div class="content mb-4">
+    I routinely publish analysis for <a href="https://theleftberlin.com/author/vinitr/" aria-label="Vinit Ravishankar on The Left Berlin"><i>The Left Berlin</i></a>. You can also find a full list of my academic publications on my <a href="https://scholar.google.com/citations?user=uDWeVG0AAAAJ">Google Scholar</a>.
+    <hr class="my-6">
+    <Media media={media} />
+    <hr class="my-6">
+    <Confs confs={confs} />
+    <hr class="my-6">
+    <Papers papers={papers} />
+  </Container>
+</PageLayout>

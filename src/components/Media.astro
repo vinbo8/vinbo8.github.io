@@ -1,0 +1,34 @@
+---
+
+import { parse, format } from "date-fns";
+
+const { media } = Astro.props;
+
+// @ts-ignore
+let parsed = media.map(m => {
+  const date = parse(m.date, "dd.MM.yyyy", new Date());
+  return {
+    ...m,
+    dateString: format(date, "MMMM y")
+  }
+})
+---
+<div class="content">
+    <h2 class="animate">
+    media
+    </h2>
+    <div class="animate mb-6">
+    </div>
+    <div class="animate">
+    <ul>
+    {
+        // @ts-ignore
+        parsed.map(m => (
+        <li class="entry">  
+            <div><a href={m.url}><b>{m.title}</b></a>, <i>{m.publication}</i>, {m.dateString}</div>
+        </li>
+        ))
+    }
+    </ul>
+    </div>
+</div>

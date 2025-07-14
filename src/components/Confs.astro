@@ -1,0 +1,80 @@
+---
+import { parse, format } from "date-fns";
+const { confs } = Astro.props;
+
+function formatDateRange(from: Date, to: Date) {
+  const sameYear = from.getFullYear() === to.getFullYear();
+  const sameMonth = from.getMonth() === to.getMonth();
+
+  if (sameYear && sameMonth) {
+    return `${format(from, 'd')}–${format(to, 'd MMMM, yyyy')}`;
+  } else if (sameYear) {
+    return `${format(from, 'd MMMM')} – ${format(to, 'd MMMM, yyyy')}`;
+  } else {
+    return `${format(from, 'd MMMM, yyyy')} – ${format(to, 'd MMMM, yyyy')}`;
+  }
+}
+
+let parsedConfs = confs.map(conf => {
+  const from = parse(conf.from, 'dd.MM.yyyy', new Date());
+  const to = parse(conf.to, 'dd.MM.yyyy', new Date());
+  return {
+    ...conf,
+    from: from,
+    to: to,
+    dateString: formatDateRange(from, to)
+  }
+})
+
+parsedConfs.sort((a, b) => {
+  // @ts-ignore
+  return a.to - b.to; 
+})
+
+const now = new Date();
+
+const pastConfs = parsedConfs.filter(conf => {
+  return conf.to <= now
+});
+
+const futureConfs = parsedConfs.filter(conf => {
+  return conf.to > now
+});
+
+---
+
+<div class="content">
+  <h2 class="animate">
+    conferences
+  </h2>
+
+  <h4 class="animate">
+    upcoming
+  </h4>
+  <div class="animate mb-8">
+    <ul>
+    {
+      futureConfs.map(c => (
+        <li class="entry">
+          <b><a href={c.url}>{c.name}</a></b>: {c.location}, {c.dateString}
+        </li>
+      ))
+    }
+    </ul>
+  </div>
+  
+  <h4 class="animate">
+    recent
+  </h4>
+  <div class="animate">
+    <ul>
+    {
+      pastConfs.map(c => (
+        <li class="entry">
+          <b>{c.name}</b>: {c.location}, {c.dateString}
+        </li>
+      ))
+    }
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Computing [X] Crisis",
+        "location": "Aarhus",
+        "from": "18.08.2025",
+        "to": "22.08.2025",
+        "url": "https://aarhus2025.org/"
+    },
+    {
+        "name": "Historical Materialism",
+        "location": "London",
+        "from": "06.11.2025",
+        "to": "09.11.2025",
+        "url": "https://www.historicalmaterialism.org/event/twenty-second-annual-conference/"
+    },
+    {
+        "name": "Historical Materialism",
+        "location": "Paris",
+        "from": "26.06.2025",
+        "to": "28.06.2025",
+        "url": "https://www.historicalmaterialism.org/event/historical-materialism-paris-2025-26-28-juin-2025-conjurer-la-catastrophe-combating-the-catastrophe/"
+    }
+]

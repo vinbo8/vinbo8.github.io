@@ -1,0 +1,34 @@
+[
+    {
+        "tag": "conference",
+        "title": "Word Order Does Matter (and Shuffled Language Models Know It)",
+        "authors": "*Mostafa Abdou, *Vinit Ravishankar, Artur Kulmizev, Anders Søgaard",
+        "venue": "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics",
+        "year": 2022,
+        "url": "https://aclanthology.org/2022.acl-long.476"
+    },
+    {
+        "tag": "conference",
+        "title": "Attention Can Reflect Syntactic Structure (If You Let It)",
+        "authors": "Vinit Ravishankar, Artur Kulmizev, Mostafa Abdou, Anders Søgaard, Joakim Nivre",
+        "venue": "Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics",
+        "year": 2021,
+        "url": "https://aclanthology.org/2021.eacl-main.264"
+    },
+    {
+        "tag": "conference",
+        "title": "From Zero to Hero: On the Limitations of Zero-Shot Language Transfer with Multilingual Transformers",
+        "authors": "*Anne Lauscher, *Vinit Ravishankar, Ivan Vulić, Goran Glavaš",
+        "venue": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing",
+        "year": 2021,
+        "url": "https://aclanthology.org/2020.emnlp-main.363"
+    },
+    {
+        "tag": "conference",
+        "title": "Do Neural Language Models Show Preferences for Syntactic Formalisms?",
+        "authors": "Artur Kulmizev, Vinit Ravishankar, Mostafa Abdou, Joakim Nivre",
+        "venue": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+        "year": 2020,
+        "url": "https://aclanthology.org/2020.acl-main.375"
+    }
+]

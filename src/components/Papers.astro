@@ -1,0 +1,28 @@
+---
+
+const { papers } = Astro.props;
+
+---
+<div class="content">
+    <h2 class="animate">
+    publications 
+    </h2>
+    <div class="animate mb-4">
+    <i>(* indicates shared first authorship)</i>
+    </div>
+    <div class="animate">
+    <ul>
+    {
+        // @ts-ignore
+        papers.map(p=> (
+            // <li class="entry">  
+            //     {p.authors} ({p.year}). <b>{p.title}</b>. {p.prefix}<i>{p.venue}</i>.
+            // </li>
+            <li class="entry">
+                <a href={p.url}><b>{p.title}</b></a><br><p class="text-sm">{p.authors}<br><i>{p.venue}</i> ({p.year})</p>
+            </li>
+        ))
+    }
+    </ul>
+    </div>
+</div>

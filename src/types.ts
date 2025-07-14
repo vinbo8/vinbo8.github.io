@@ -15,3 +15,8 @@ export type Socials = {
   NAME: string;
   HREF: string;
 }[];
+
+export type SVGs = {
+  NAME: string;
+  CODE: string;
+}

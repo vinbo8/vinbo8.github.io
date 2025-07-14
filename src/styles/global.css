@@ -7,9 +7,6 @@ html {
   color-scheme: light;
 }
 
-html.dark {
-  color-scheme: dark;
-}
 
 html,
 body {
@@ -17,47 +14,66 @@ body {
 }
 
 body {
-  @apply font-sans antialiased;
+  @apply font-body text-lg antialiased;
   @apply flex flex-col;
-  @apply bg-stone-100 dark:bg-stone-900;
-  @apply text-black/50 dark:text-white/75;
+  @apply bg-white;
+  @apply text-black;
 }
 
 header {
-  @apply fixed top-0 left-0 right-0 z-50 py-5;
-  @apply bg-stone-100/75 dark:bg-stone-900/25;
+  /* @apply fixed top-0 left-0 right-0 z-50 py-5; */
+  @apply py-5;
+  @apply bg-white;
   @apply backdrop-blur-sm saturate-200;
 }
 
 main {
-  @apply flex-1 py-32;
+  @apply flex-1 py-10;
 }
 
 footer {
   @apply py-5 text-sm;
 }
 
-article {
-  @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto;
-  @apply prose-headings:font-semibold prose-p:font-serif;
-  @apply prose-headings:text-black prose-headings:dark:text-white;
+header {
+  @apply font-title;
 }
 
-@layer utilities {
-  article a {
-    @apply font-sans text-current underline underline-offset-2;
-    @apply decoration-black/15 dark:decoration-white/30;
-    @apply transition-colors duration-300 ease-in-out;
-  }
-  article a:hover {
-    @apply text-black dark:text-white;
-    @apply decoration-black/25 dark:decoration-white/50;
-  }
+li.entry {
+  @apply mb-2 pl-2 border-black border-l py-0;
+  @apply hover:border-red-500 transition-colors duration-200;
+}
+
+
+:is(h1, h2, h3, h4, h5, h6) {
+  @apply font-title;
+}
+
+h2 {
+  @apply text-3xl font-bold;
+  @apply mb-8;
+}
+
+h4 {
+  @apply text-xl;
+  @apply mb-4;
+}
+
+a:not(.header-url) {
+  @apply transition-colors duration-200 ease-in-out underline;
+}
+
+a:hover:not(.header-url) {
+  @apply text-red-500;
+}
+
+li.entry a {
+  @apply no-underline;
 }
 
 .animate {
   @apply opacity-0 translate-y-3;
-  @apply transition-all duration-700 ease-out;
+  @apply transition-all duration-200 ease-out;
 }
 
 .animate.show {
