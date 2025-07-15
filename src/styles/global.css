@@ -60,7 +60,8 @@ h4 {
 }
 
 a:not(.header-url) {
-  @apply transition-colors duration-200 ease-in-out underline;
+  @apply transition-colors duration-200 ease-in-out;
+  @apply underline underline-offset-4;
 }
 
 a:hover:not(.header-url) {

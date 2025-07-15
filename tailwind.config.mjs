@@ -9,7 +9,7 @@ export default {
     extend: {
       fontFamily: {
         title: ["Bitter", ...defaultTheme.fontFamily.sans],
-        body: ["Work Sans", ...defaultTheme.fontFamily.serif],
+        body: ["Source Sans 3", ...defaultTheme.fontFamily.serif],
       },
     },
   },
