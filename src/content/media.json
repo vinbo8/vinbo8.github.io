@@ -3,7 +3,13 @@
         "title": "The Rise and Fall of the Knowledge Worker",
         "publication": "Jacobin",
         "date": "10.07.2025",
-        "url": "https://jacobin.com/2025/07/knowledge-workers-ai-globalization-deindustrialization"
+        "url": "https://jacobin.com/2025/07/knowledge-workers-ai-globalization-deindustrialization",
+        "translations": [
+            {
+                "lang": "de",
+                "url": "https://jacobin.de/artikel/wissensarbeiter-globalisierung-ki-deindustrialisierung"
+            }
+        ]
     },
     {
         "title": "AI, Capitalism, and the State",

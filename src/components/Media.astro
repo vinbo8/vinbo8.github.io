@@ -4,7 +4,6 @@ import { parse, format } from "date-fns";
 
 const { media } = Astro.props;
 
-// @ts-ignore
 let parsed = media.map(m => {
   const date = parse(m.date, "dd.MM.yyyy", new Date());
   return {
@@ -23,11 +22,20 @@ let parsed = media.map(m => {
     <ul>
     {
         // @ts-ignore
-        parsed.map(m => (
-        <li class="entry">  
-            <div><a href={m.url}><b>{m.title}</b></a>, <i>{m.publication}</i>, {m.dateString}</div>
-        </li>
-        ))
+        parsed.map(m => {
+          return <li class="entry">  
+              <div>
+                <a href={m.url}><b>{m.title}</b></a>, <i>{m.publication}</i>, {m.dateString} 
+                {m.translations !== undefined && 
+                  <>
+                  [<i>translated</i>: {m.translations.map((tr, i) => (
+                    <a href={tr.url} class="trans"><b>{tr.lang}</b></a>
+                   ))}]
+                  </>
+                }
+              </div>
+          </li>
+        })
     }
     </ul>
     </div>

@@ -68,8 +68,12 @@ a:hover:not(.header-url) {
   @apply text-red-500;
 }
 
-li.entry a {
+li.entry a:not(.trans) {
   @apply no-underline;
+}
+
+.trans {
+  @apply underline decoration-black/20;
 }
 
 .animate {
