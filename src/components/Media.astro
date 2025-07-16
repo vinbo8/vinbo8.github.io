@@ -29,7 +29,9 @@ let parsed = media.map(m => {
                 {m.translations !== undefined && 
                   <>
                   [<i>translated</i>: {m.translations.map((tr, i) => (
-                    <a href={tr.url} class="trans"><b>{tr.lang}</b></a>
+                    <>
+                    <a href={tr.url} class="trans"><b>{tr.lang}</b></a>{i < m.translations.length - 1 && ', '}
+                    </>
                    ))}]
                   </>
                 }
