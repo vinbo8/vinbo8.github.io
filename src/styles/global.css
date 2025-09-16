@@ -7,7 +7,6 @@ html {
   color-scheme: light;
 }
 
-
 html,
 body {
   @apply size-full;
@@ -15,15 +14,21 @@ body {
 
 body {
   @apply font-body text-lg antialiased;
-  @apply flex flex-col;
-  @apply bg-white;
-  @apply text-gray-800;
+  /* @apply flex flex-col; */
+  @apply bg-t1;
+  @apply text-t3;
+}
+
+::selection {
+  @apply bg-t3 text-t2;
+}
+
+.container {
+  @apply bg-t2;
 }
 
 header {
-  /* @apply fixed top-0 left-0 right-0 z-50 py-5; */
   @apply py-5;
-  @apply bg-white;
   @apply backdrop-blur-sm saturate-200;
 }
 
@@ -45,7 +50,8 @@ li.entry {
   @apply hover:border-red-500 transition-colors duration-200;
 }
 
-li.outdated {
+li.outdated,
+li.outdated * {
   @apply text-gray-500;
 }
 
@@ -54,7 +60,7 @@ li.outdated {
 }
 
 b {
-  @apply font-normal underline underline-offset-2 decoration-gray-300;
+  @apply font-normal;
 }
 
 hr {
@@ -73,19 +79,11 @@ h4 {
 
 a:not(.header-url) {
   @apply transition-colors duration-200 ease-in-out;
-  @apply underline underline-offset-4;
-}
-
-a:not(.outdated) {
-  @apply text-black;
+  @apply underline underline-offset-2 decoration-gray-400;
 }
 
 a:hover:not(.header-url) {
-  @apply text-red-500;
-}
-
-li.entry a:not(.trans) {
-  @apply no-underline;
+  @apply text-t1;
 }
 
 .trans {

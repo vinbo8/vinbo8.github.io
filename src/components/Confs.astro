@@ -6,8 +6,11 @@ const { confs } = Astro.props;
 function formatDateRange(from: Date, to: Date) {
   const sameYear = from.getFullYear() === to.getFullYear();
   const sameMonth = from.getMonth() === to.getMonth();
+  const sameDay = from.getDate() === to.getDate();
 
-  if (sameYear && sameMonth) {
+  if (sameYear && sameMonth && sameDay) {
+    return `${format(from, 'd MMMM, yyyy')}`;
+  } else if (sameYear && sameMonth) {
     return `${format(from, 'd')}–${format(to, 'd MMMM, yyyy')}`;
   } else if (sameYear) {
     return `${format(from, 'd MMMM')} – ${format(to, 'd MMMM, yyyy')}`;

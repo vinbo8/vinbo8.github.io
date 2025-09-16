@@ -9,7 +9,6 @@ import { Icon } from 'astro-icon/components'
 ---
 
 <PageLayout title="vinit - about"> 
-  <Container>
     <h2 class="animate">
       about
     </h2>
@@ -18,20 +17,20 @@ import { Icon } from 'astro-icon/components'
         <div class="w-full sm:w-3/4">
           <div>
             <p class="animate">
-              I am an interdisciplinary researcher, writer and editor based in Berlin. My research is focused on analysing the transformations in society spurred on by the development and deployment of artificial intelligence. I also serve on the editorial board for <a href="https://theleftberlin.com" aria-label="The Left Berlin"><i>The Left Berlin</i></a>, and the recently launched <a href="https://disjunctionsmag.com" aria-label="Disjunctions Magazine"><i>Disjunctions Magazine</i></a>.
+              I am an interdisciplinary researcher, writer and editor based between Copenhagen and Berlin, presently employed as a postdoctoral researcher at the <a href="https://sodas.ku.dk/" aria-label="SODAS">Copenhagen Center for Social Data Science</a>. My research focuses on the transformations in society spurred on by the development and deployment of artificial intelligence.
+            </p> 
+            <br>
+            <p class="animate">
+              I am particularly interested in two aspects of this transformation: in the sociological implications of the widespread adoption of generative AI, and in analysis and critique of the broader political economy of generative AI, and the role it plays in (techno-)capitalism. My PhD dissertation focused on leveraging technical critiques of "multilinguality" in language models, through a perspective of linguistic theory and model interpretability.
             </p>
             <br>
             <p class="animate">
-              My current research program centers on analysis and critique of the broader political economy of generative artificial intelligence. My PhD dissertation — written at the University of Oslo — focused on leveraging technical critiques of "multilinguality" in language models, through a perspective of linguistic theory and model interpretability.
-            </p>
-            <br>
-            <p class="animate">
-              Beyond academia, I am a member of the Copenhagen-based <a href="https://instagram.com/beforeforgetting"><i>Before Forgetting</i></a> cinema collective. I am also a musician, and design audio for live environments, score films, and volunteer as a sound engineer.
+              I serve on the editorial board for <a href="https://theleftberlin.com" aria-label="The Left Berlin">The Left Berlin</a>, and the recently launched <a href="https://disjunctionsmag.com" aria-label="Disjunctions Magazine">Disjunctions Magazine</a>.
             </p>
           </div>
         </div>
         <div class="w-full sm:w-1/4 flex flex-col items-center animate mb-8 sm:mb-0 ">
-          <Image src={profileImage} class="w-64 h-auto rounded-full" alt="vinit"/>
+          <Image src={profileImage} class="w-64 h-auto" alt="vinit"/>
 
           <div class="flex space-x-3 mt-6">
             <a class="transition" target="_blank" rel="noopener noreferrer" href="mailto:vinit94@proton.me">
@@ -70,5 +69,4 @@ import { Icon } from 'astro-icon/components'
         </li>
       </ul> -->
     </div>
-  </Container>
 </PageLayout>

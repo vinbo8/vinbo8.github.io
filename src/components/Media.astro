@@ -28,7 +28,7 @@ let parsed = media.map(m => {
                 <a href={m.url}><b>{m.title}</b></a>, <i>{m.publication}</i>, {m.dateString} 
                 {m.translations !== undefined && 
                   <>
-                  [<i>translated</i>: {m.translations.map((tr, i) => (
+                  [translated: {m.translations.map((tr, i) => (
                     <>
                     <a href={tr.url} class="trans"><b>{tr.lang}</b></a>{i < m.translations.length - 1 && ', '}
                     </>

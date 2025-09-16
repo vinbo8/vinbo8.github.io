@@ -7,10 +7,16 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        "t1": "#ea5440",
+        "t2": "#f2f2f2",
+        "t3": "#1a090d",
+        "t4": "#697268",
+      },
       fontFamily: {
         title: ["Jost", ...defaultTheme.fontFamily.serif],
         body: ["Bricolage Grotesque", ...defaultTheme.fontFamily.serif],
-        deco: ["Pompiere"],
+        deco: ["Jost"],
       },
     },
   },
