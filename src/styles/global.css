@@ -17,7 +17,7 @@ body {
   @apply font-body text-lg antialiased;
   @apply flex flex-col;
   @apply bg-white;
-  @apply text-black;
+  @apply text-gray-800;
 }
 
 header {
@@ -40,28 +40,44 @@ header {
 }
 
 li.entry {
-  @apply mb-2 pl-2 border-black border-l py-0;
+  @apply mb-2 py-0;
+  /* @apply mb-2 pl-2 border-black border-l py-0; */
   @apply hover:border-red-500 transition-colors duration-200;
 }
 
+li.outdated {
+  @apply text-gray-500;
+}
 
 :is(h1, h2, h3, h4, h5, h6) {
   @apply font-title;
 }
 
+b {
+  @apply font-normal underline underline-offset-2 decoration-gray-300;
+}
+
+hr {
+  @apply my-4;
+}
+
 h2 {
   @apply text-3xl font-bold;
-  @apply mb-8;
+  @apply mb-4;
 }
 
 h4 {
-  @apply text-xl;
-  @apply mb-4;
+  @apply text-xl font-normal;
+  @apply mb-2;
 }
 
 a:not(.header-url) {
   @apply transition-colors duration-200 ease-in-out;
   @apply underline underline-offset-4;
+}
+
+a:not(.outdated) {
+  @apply text-black;
 }
 
 a:hover:not(.header-url) {

@@ -8,8 +8,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        title: ["Bitter", ...defaultTheme.fontFamily.sans],
-        body: ["Source Sans 3", ...defaultTheme.fontFamily.serif],
+        title: ["Jost", ...defaultTheme.fontFamily.serif],
+        body: ["Bricolage Grotesque", ...defaultTheme.fontFamily.serif],
+        deco: ["Pompiere"],
       },
     },
   },

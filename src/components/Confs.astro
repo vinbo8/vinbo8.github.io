@@ -48,10 +48,10 @@ const futureConfs = parsedConfs.filter(conf => {
     conferences
   </h2>
 
-  <h4 class="animate">
+  <!-- <h4 class="animate">
     upcoming
-  </h4>
-  <div class="animate mb-8">
+  </h4> -->
+  <div class="animate mb-6">
     <ul>
     {
       futureConfs.map(c => (
@@ -62,16 +62,13 @@ const futureConfs = parsedConfs.filter(conf => {
     }
     </ul>
   </div>
-  
-  <h4 class="animate">
-    (recent) past 
-  </h4>
+  <hr>
   <div class="animate">
     <ul>
     {
       pastConfs.map(c => (
-        <li class="entry">
-          <b>{c.name}</b>: {c.location}, {c.dateString}
+        <li class="entry outdated">
+          <b><a href={c.url}>{c.name}</a></b>: {c.location}, {c.dateString}
         </li>
       ))
     }
