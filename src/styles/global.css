@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.smallcaps {
+  font-variant: small-caps;
+}
+
+.smallcaps::first-letter {
+  font-variant: normal;
+}
+
 html {
   overflow-y: scroll;
   color-scheme: light;

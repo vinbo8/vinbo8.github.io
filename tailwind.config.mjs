@@ -17,7 +17,7 @@ export default {
       fontFamily: {
         title: ["Jost", ...defaultTheme.fontFamily.serif],
         body: ["Bricolage Grotesque", ...defaultTheme.fontFamily.serif],
-        deco: ["Jost"],
+        // deco: ["Jost"],
       },
     },
   },

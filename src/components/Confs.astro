@@ -8,14 +8,21 @@ function formatDateRange(from: Date, to: Date) {
   const sameMonth = from.getMonth() === to.getMonth();
   const sameDay = from.getDate() === to.getDate();
 
+//   if (sameYear && sameMonth && sameDay) {
+//     return `${format(from, 'd MMMM, yyyy')}`;
+//   } else if (sameYear && sameMonth) {
+//     return `${format(from, 'd')}–${format(to, 'd MMMM, yyyy')}`;
+//   } else if (sameYear) {
+//     return `${format(from, 'd MMMM')} – ${format(to, 'd MMMM, yyyy')}`;
+//   } else {
+//     return `${format(from, 'd MMMM, yyyy')} – ${format(to, 'd MMMM, yyyy')}`;
+//   }
+// }
+
   if (sameYear && sameMonth && sameDay) {
-    return `${format(from, 'd MMMM, yyyy')}`;
-  } else if (sameYear && sameMonth) {
-    return `${format(from, 'd')}–${format(to, 'd MMMM, yyyy')}`;
-  } else if (sameYear) {
-    return `${format(from, 'd MMMM')} – ${format(to, 'd MMMM, yyyy')}`;
+    return `${format(from, 'd.M.yy')}`;
   } else {
-    return `${format(from, 'd MMMM, yyyy')} – ${format(to, 'd MMMM, yyyy')}`;
+    return `${format(from, 'd.M.yy')} – ${format(to, 'd.M.yy')}`;
   }
 }
 
@@ -59,8 +66,8 @@ const futureconfs = parsedconfs.filter(conf => {
     {
       futureconfs.map(c => (
         <li class="entry">
-          <b>"{c.title}"</b><br>
-          <p class="text-sm"><b>{c.conf}</b>. {c.location}, {c.dateString}</p>
+          <span>"{c.title}"</span>
+          <div class="flex justify-between"><span class="text-sm">{c.conf}. {c.location}</span><span class="text-right text-sm">{c.dateString}</span></div>
         </li>
       ))
     }
@@ -69,8 +76,8 @@ const futureconfs = parsedconfs.filter(conf => {
     {
       pastconfs.map(c => (
         <li class="entry outdated">
-          <b>"{c.title}"</b><br>
-          <p class="text-sm"><b>{c.conf}</b>. {c.location}, {c.dateString}</p>
+          <span class="leading-none">"{c.title}"</span>
+          <div class="flex justify-between"><span class="leading-none text-sm">{c.conf}. {c.location}</span><span class="text-right text-sm leading-none">{c.dateString}</span></div>
         </li>
       ))
     }
