@@ -31,7 +31,7 @@ let parsedConfs = confs.map(conf => {
 })
 
 parsedConfs.sort((a, b) => {
-  return a.to - b.to; 
+  return Math.abs(a.to - b.to); 
 })
 
 const now = new Date();
@@ -48,7 +48,7 @@ const futureConfs = parsedConfs.filter(conf => {
 
 <div class="content">
   <h2 class="animate">
-    conferences
+    panels 
   </h2>
 
   <!-- <h4 class="animate">
@@ -59,19 +59,18 @@ const futureConfs = parsedConfs.filter(conf => {
     {
       futureConfs.map(c => (
         <li class="entry">
-          <b><a href={c.url}>{c.name}</a></b>: {c.location}, {c.dateString}
+          <b>"{c.title}"</b><br>
+          <p class="text-sm"><b>{c.conf}</b>. {c.location}, {c.dateString}</p>
         </li>
       ))
     }
     </ul>
-  </div>
-  <hr>
-  <div class="animate">
     <ul>
     {
       pastConfs.map(c => (
         <li class="entry outdated">
-          <b><a href={c.url}>{c.name}</a></b>: {c.location}, {c.dateString}
+          <b>"{c.title}"</b><br>
+          <p class="text-sm"><b>{c.conf}</b>. {c.location}, {c.dateString}</p>
         </li>
       ))
     }

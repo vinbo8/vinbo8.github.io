@@ -1,0 +1,14 @@
+---
+import PageLayout from "@components/PageLayout.astro";
+import Container from "@components/Container.astro";
+import media from "../content/media.json"
+import confs from "../content/confs.json"
+import papers from "../content/papers.json"
+import Media from "@components/Media.astro"
+import Confs from "@components/Confs.astro"
+import Papers from "@components/Papers.astro"
+---
+
+<PageLayout title="vinit - talks">
+    <Confs confs={confs} />
+</PageLayout>

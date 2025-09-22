@@ -1,37 +1,44 @@
 [
     {
-        "name": "Generative AI & The Faces of Power",
+        "conf": "The Politics of AI: Governance, Resistance, Alternatives",
+        "title": "Governing generative AI requires rethinking economic planning",
+        "location": "London",
+        "from": "18.09.2025",
+        "to": "18.09.2025"
+    },
+    {
+        "conf": "Generative AI & The Faces of Power",
+        "title": "Domination, expropriation and AI infrastructures",
         "location": "Berlin",
         "from": "20.11.2025",
-        "to": "21.11.2025",
-        "url": "https://www.weizenbaum-institut.de/en/events-1/generative-ai-the-faces-of-power/"
+        "to": "21.11.2025"
     },
     {
-        "name": "GenAI & Creative Practices",
+        "conf": "GenAI & Creative Practices",
+        "title": "Post-Fordist creativity and generative AI",
         "location": "Amsterdam",
         "from": "17.12.2025",
-        "to": "18.12.2025",
-        "url": "https://rdt.uva.nl/content/news/2025/03/call-for-papers-genai--creative-practices-conference.html"
+        "to": "18.12.2025"
     },
     {
-        "name": "AI X Crisis",
+        "conf": "AI X Crisis",
+        "title": "Labour, value and generative AI",
         "location": "Aarhus",
         "from": "18.08.2025",
-        "to": "18.08.2025",
-        "url": "https://aarhus2025.org/"
+        "to": "18.08.2025"
     },
     {
-        "name": "Historical Materialism",
+        "conf": "Historical Materialism",
+        "title": "Charting generative AI's political economy",
         "location": "London",
         "from": "06.11.2025",
-        "to": "09.11.2025",
-        "url": "https://www.historicalmaterialism.org/event/twenty-second-annual-conference/"
+        "to": "09.11.2025"
     },
     {
-        "name": "Historical Materialism",
+        "conf": "Historical Materialism",
+        "title": "Generative AI — a critical political economy",
         "location": "Paris",
         "from": "26.06.2025",
-        "to": "28.06.2025",
-        "url": "https://www.historicalmaterialism.org/event/historical-materialism-paris-2025-26-28-juin-2025-conjurer-la-catastrophe-combating-the-catastrophe/"
+        "to": "28.06.2025"
     }
 ]
