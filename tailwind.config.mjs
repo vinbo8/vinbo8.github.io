@@ -8,10 +8,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        "t1": "#ea5440",
-        "t2": "#f2f2f2",
-        "t3": "#1a090d",
-        "t4": "#697268",
+        // "highlight": "#ea5440",
+        "highlight": "#db5461",
+        "accent": "#024034",
+        "bg": "#f2f2f2",
+        "fg": "#1a090d",
       },
       fontFamily: {
         title: ["Jost", ...defaultTheme.fontFamily.serif],

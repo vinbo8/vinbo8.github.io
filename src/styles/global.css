@@ -15,21 +15,20 @@ body {
 body {
   @apply font-body text-lg antialiased;
   /* @apply flex flex-col; */
-  @apply bg-t1;
-  @apply text-t3;
+  @apply bg-accent;
+  @apply text-fg;
 }
 
 ::selection {
-  @apply bg-t3 text-t2;
+  @apply bg-fg text-bg;
 }
 
 .container {
-  @apply bg-t2;
+  @apply bg-bg;
 }
 
 header {
   @apply py-5;
-  @apply backdrop-blur-sm saturate-200;
 }
 
 main {
@@ -83,7 +82,7 @@ a:not(.header-url) {
 }
 
 a:hover:not(.header-url) {
-  @apply text-t1;
+  @apply text-highlight;
 }
 
 .trans {

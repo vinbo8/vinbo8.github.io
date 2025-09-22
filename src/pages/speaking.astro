@@ -7,8 +7,13 @@ import papers from "../content/papers.json"
 import Media from "@components/Media.astro"
 import Confs from "@components/Confs.astro"
 import Papers from "@components/Papers.astro"
+
+const panels = confs.filter((conf) => conf.type == "panel")
+const talks = confs.filter((conf) => conf.type == "talk")
 ---
 
-<PageLayout title="vinit - talks">
-    <Confs confs={confs} />
+<PageLayout title="vinit - confs">
+    <Confs confs={panels} section="panels" />
+    <br class="mb-2">
+    <Confs confs={talks} section="talks" />
 </PageLayout>

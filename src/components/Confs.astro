@@ -1,7 +1,7 @@
 ---
 // @ts-nocheck
 import { parse, format } from "date-fns";
-const { confs } = Astro.props;
+const { confs, section } = Astro.props;
 
 function formatDateRange(from: Date, to: Date) {
   const sameYear = from.getFullYear() === to.getFullYear();
@@ -19,7 +19,7 @@ function formatDateRange(from: Date, to: Date) {
   }
 }
 
-let parsedConfs = confs.map(conf => {
+let parsedconfs = confs.map(conf => {
   const from = parse(conf.from, 'dd.MM.yyyy', new Date());
   const to = parse(conf.to, 'dd.MM.yyyy', new Date());
   return {
@@ -30,17 +30,17 @@ let parsedConfs = confs.map(conf => {
   }
 })
 
-parsedConfs.sort((a, b) => {
+parsedconfs.sort((a, b) => {
   return Math.abs(a.to - b.to); 
 })
 
 const now = new Date();
 
-const pastConfs = parsedConfs.filter(conf => {
+const pastconfs = parsedconfs.filter(conf => {
   return conf.to <= now
 });
 
-const futureConfs = parsedConfs.filter(conf => {
+const futureconfs = parsedconfs.filter(conf => {
   return conf.to > now
 });
 
@@ -48,16 +48,16 @@ const futureConfs = parsedConfs.filter(conf => {
 
 <div class="content">
   <h2 class="animate">
-    panels 
+    {section}
   </h2>
 
   <!-- <h4 class="animate">
     upcoming
   </h4> -->
-  <div class="animate mb-6">
+  <div class="animate">
     <ul>
     {
-      futureConfs.map(c => (
+      futureconfs.map(c => (
         <li class="entry">
           <b>"{c.title}"</b><br>
           <p class="text-sm"><b>{c.conf}</b>. {c.location}, {c.dateString}</p>
@@ -67,7 +67,7 @@ const futureConfs = parsedConfs.filter(conf => {
     </ul>
     <ul>
     {
-      pastConfs.map(c => (
+      pastconfs.map(c => (
         <li class="entry outdated">
           <b>"{c.title}"</b><br>
           <p class="text-sm"><b>{c.conf}</b>. {c.location}, {c.dateString}</p>
