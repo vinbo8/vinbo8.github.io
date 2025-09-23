@@ -67,7 +67,7 @@ const futureconfs = parsedconfs.filter(conf => {
       futureconfs.map(c => (
         <li class="entry">
           <span>"{c.title}"</span>
-          <div class="flex justify-between"><span class="text-sm">{c.conf}. {c.location}</span><span class="text-right text-sm">{c.dateString}</span></div>
+          <div class="flex justify-between"><span class="text-sm">{c.conf}, {c.location}</span><span class="text-right text-sm">{c.dateString}</span></div>
         </li>
       ))
     }
@@ -77,7 +77,7 @@ const futureconfs = parsedconfs.filter(conf => {
       pastconfs.map(c => (
         <li class="entry outdated">
           <span class="leading-none">"{c.title}"</span>
-          <div class="flex justify-between"><span class="leading-none text-sm">{c.conf}. {c.location}</span><span class="text-right text-sm leading-none">{c.dateString}</span></div>
+          <div class="flex justify-between"><span class="leading-none text-sm">{c.conf}, {c.location}</span><span class="text-right text-sm leading-none">{c.dateString}</span></div>
         </li>
       ))
     }
