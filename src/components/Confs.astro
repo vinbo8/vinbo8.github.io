@@ -1,55 +1,54 @@
 ---
 // @ts-nocheck
-import { parse, format } from "date-fns";
+import { parse, format, differenceInDays } from "date-fns";
 const { confs, section } = Astro.props;
 
-function formatDateRange(from: Date, to: Date) {
-  const sameYear = from.getFullYear() === to.getFullYear();
-  const sameMonth = from.getMonth() === to.getMonth();
-  const sameDay = from.getDate() === to.getDate();
+// function formatDateRange(from: Date, to: Date) {
+//   const sameYear = from.getFullYear() === to.getFullYear();
+//   const sameMonth = from.getMonth() === to.getMonth();
+//   const sameDay = from.getDate() === to.getDate();
+
+// //   if (sameYear && sameMonth && sameDay) {
+// //     return `${format(from, 'd MMMM, yyyy')}`;
+// //   } else if (sameYear && sameMonth) {
+// //     return `${format(from, 'd')}–${format(to, 'd MMMM, yyyy')}`;
+// //   } else if (sameYear) {
+// //     return `${format(from, 'd MMMM')} – ${format(to, 'd MMMM, yyyy')}`;
+// //   } else {
+// //     return `${format(from, 'd MMMM, yyyy')} – ${format(to, 'd MMMM, yyyy')}`;
+// //   }
+// // }
 
 //   if (sameYear && sameMonth && sameDay) {
-//     return `${format(from, 'd MMMM, yyyy')}`;
-//   } else if (sameYear && sameMonth) {
-//     return `${format(from, 'd')}–${format(to, 'd MMMM, yyyy')}`;
-//   } else if (sameYear) {
-//     return `${format(from, 'd MMMM')} – ${format(to, 'd MMMM, yyyy')}`;
+//     return `${format(from, 'd.M.yy')}`;
 //   } else {
-//     return `${format(from, 'd MMMM, yyyy')} – ${format(to, 'd MMMM, yyyy')}`;
+//     return `${format(from, 'd.M.yy')} – ${format(to, 'd.M.yy')}`;
 //   }
 // }
 
-  if (sameYear && sameMonth && sameDay) {
-    return `${format(from, 'd.M.yy')}`;
-  } else {
-    return `${format(from, 'd.M.yy')} – ${format(to, 'd.M.yy')}`;
-  }
-}
-
 let parsedconfs = confs.map(conf => {
-  const from = parse(conf.from, 'dd.MM.yyyy', new Date());
-  const to = parse(conf.to, 'dd.MM.yyyy', new Date());
+  const datestring = parse(conf.date, 'dd.MM.yyyy', new Date());
   return {
     ...conf,
-    from: from,
-    to: to,
-    dateString: formatDateRange(from, to)
+    datestring: datestring
   }
 })
 
-parsedconfs.sort((a, b) => {
-  return Math.abs(a.to - b.to); 
+
+parsedconfs = parsedconfs.sort((a, b) => {
+  return b.datestring - a.datestring; 
 })
 
 const now = new Date();
 
 const pastconfs = parsedconfs.filter(conf => {
-  return conf.to <= now
+  return conf.datestring <= now
 });
 
 const futureconfs = parsedconfs.filter(conf => {
-  return conf.to > now
+  return conf.datestring > now
 });
+
 
 ---
 
@@ -67,7 +66,7 @@ const futureconfs = parsedconfs.filter(conf => {
       futureconfs.map(c => (
         <li class="entry">
           <span>"{c.title}"</span>
-          <div class="flex justify-between"><span class="text-sm">{c.conf}, {c.location}</span><span class="text-right text-sm">{c.dateString}</span></div>
+          <div class="flex justify-between"><span class="text-sm">{c.conf}, {c.location}</span><span class="text-right text-sm">{c.date}</span></div>
         </li>
       ))
     }
@@ -77,7 +76,7 @@ const futureconfs = parsedconfs.filter(conf => {
       pastconfs.map(c => (
         <li class="entry outdated">
           <span class="leading-none">"{c.title}"</span>
-          <div class="flex justify-between"><span class="leading-none text-sm">{c.conf}, {c.location}</span><span class="text-right text-sm leading-none">{c.dateString}</span></div>
+          <div class="flex justify-between"><span class="leading-none text-sm">{c.conf}, {c.location}</span><span class="text-right text-sm leading-none">{c.date}</span></div>
         </li>
       ))
     }

@@ -11,8 +11,8 @@ export default {
         // "highlight": "#ea5440",
         "highlight": "#db5461",
         "accent": "#024034",
-        "bg": "#f2f2f2",
-        "fg": "#1a090d",
+        "bg": "#ffffff",
+        "fg": "#000000",
       },
       fontFamily: {
         title: ["Jost", ...defaultTheme.fontFamily.serif],

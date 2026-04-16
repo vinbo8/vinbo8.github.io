@@ -1,66 +1,72 @@
 [
     {
+        "type": "panel",
+        "conf": "Historical Materialism",
+        "title": "Tempering the casino: social reproduction amidst the data-center boom",
+        "location": "Barcelona",
+        "date": "02.07.2026"
+    },
+    {
         "type": "talk",
-        "conf": "UiB AI #12: Aligning AI with Human Values",
-        "title": "Towards a critical political economy of generative AI",
-        "location": "University of Bergen",
-        "from": "29.11.2024",
-        "to": "29.11.2024"
+        "conf": "Cables of Resistance",
+        "title": "Data centres and the imperialist casino",
+        "location": "Berlin",
+        "date": "11.04.2026"
     },
     {
         "type": "talk",
         "conf": "UNFRAME Festival",
         "title": "Generative AI — a Marxist perspective",
         "location": "Berlin",
-        "from": "31.10.2025",
-        "to": "02.11.2025"
-    },
+        "date": "01.11.2025"
+    },      
+    {
+        "type": "talk",
+        "conf": "UiB AI #12: Aligning AI with Human Values",
+        "title": "Towards a critical political economy of generative AI",
+        "location": "University of Bergen",
+        "date": "29.11.2024"
+    },    
     {
         "type": "panel",
         "conf": "The Politics of AI: Governance, Resistance, Alternatives",
         "title": "Governing generative AI requires rethinking economic planning",
         "location": "London",
-        "from": "18.09.2025",
-        "to": "18.09.2025"
+        "date": "18.09.2025"
     },
     {
         "type": "panel",
         "conf": "Generative AI & The Faces of Power",
         "title": "Domination, expropriation and AI infrastructures",
         "location": "Berlin",
-        "from": "20.11.2025",
-        "to": "21.11.2025"
+        "date": "21.11.2025"
     },
     {
         "type": "panel",
         "conf": "GenAI & Creative Practices",
         "title": "Post-Fordist creativity and generative AI",
         "location": "Amsterdam",
-        "from": "17.12.2025",
-        "to": "18.12.2025"
+        "date": "18.12.2025"
     },
     {
         "type": "panel",
         "conf": "AI X Crisis",
         "title": "Labour, value and generative AI",
         "location": "Aarhus",
-        "from": "18.08.2025",
-        "to": "18.08.2025"
+        "date": "18.08.2025"
     },
     {
         "type": "panel",
         "conf": "Historical Materialism",
         "title": "Charting generative AI's political economy",
         "location": "London",
-        "from": "06.11.2025",
-        "to": "09.11.2025"
+        "date": "07.11.2025"
     },
     {
         "type": "panel",
         "conf": "Historical Materialism",
         "title": "Generative AI — a critical political economy",
         "location": "Paris",
-        "from": "26.06.2025",
-        "to": "28.06.2025"
+        "date": "27.06.2025"
     }
 ]
