@@ -9,14 +9,14 @@ export default {
     extend: {
       colors: {
         // "highlight": "#ea5440",
-        "highlight": "#db5461",
-        "accent": "#024034",
+        "highlight": "#E3170A",
+        "accent": "#eaeee7",
         "bg": "#ffffff",
         "fg": "#000000",
       },
       fontFamily: {
-        title: ["Jost", ...defaultTheme.fontFamily.serif],
-        body: ["Bricolage Grotesque", ...defaultTheme.fontFamily.serif],
+        title: ["Redaction", ...defaultTheme.fontFamily.serif],
+        body: ["Spline Sans",  ...defaultTheme.fontFamily.mono],
         // deco: ["Jost"],
       },
     },

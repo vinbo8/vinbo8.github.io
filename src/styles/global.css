@@ -21,7 +21,7 @@ body {
 }
 
 body {
-  @apply font-body text-lg antialiased;
+  @apply font-body text-lg antialiased leading-7;
   /* @apply flex flex-col; */
   @apply bg-accent;
   @apply text-fg;
@@ -31,9 +31,9 @@ body {
   @apply bg-fg text-bg;
 }
 
-.container {
-  @apply bg-bg;
-}
+/* .container {
+  @apply bg-accent;
+} */
 
 header {
   @apply py-5;
@@ -85,8 +85,8 @@ h4 {
 }
 
 a:not(.header-url) {
-  @apply transition-colors duration-200 ease-in-out;
-  @apply underline underline-offset-2 decoration-gray-400;
+  @apply transition-colors duration-75 ease-in-out;
+  @apply underline underline-offset-2 decoration-gray-400 decoration-1;
 }
 
 a:hover:not(.header-url) {
