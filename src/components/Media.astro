@@ -8,7 +8,7 @@ let parsed = media.map(m => {
   const date = parse(m.date, "dd.MM.yyyy", new Date());
   return {
     ...m,
-    dateString: format(date, "MMMM y")
+    dateString: format(date, "MMM y")
   }
 })
 ---
@@ -25,7 +25,8 @@ let parsed = media.map(m => {
         parsed.map(m => {
           return <li class="entry">  
               <div>
-                <a href={m.url}><b>"{m.title}"</b></a>, <i>{m.publication}</i>, {m.dateString} 
+                <a href={m.url}><b>{m.title}</b></a><br>
+                <p class="text-sm">{m.publication}, {m.dateString}
                 {m.translations !== undefined && 
                   <>
                   [translated: {m.translations.map((tr, i) => (
@@ -34,7 +35,7 @@ let parsed = media.map(m => {
                     </>
                    ))}]
                   </>
-                }
+                }</p> 
               </div>
           </li>
         })
