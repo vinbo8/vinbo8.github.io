@@ -16,7 +16,7 @@ const { papers } = Astro.props;
             //     {p.authors} ({p.year}). <b>{p.title}</b>. {p.prefix}<i>{p.venue}</i>.
             // </li>
             <li class="entry">
-                <a href={p.url}><b>{p.title}</b></a><br><p class="text-sm">{p.authors}<br>{p.venue} ({p.year})</p>
+                <a href={p.url}><b>{p.title}</b></a><br><p class="text-sm">{p.authors}<br>{p.venue} ({p.year}) {p.status && <i>[{p.status}]</i>}</p>
             </li>
         ))
     }

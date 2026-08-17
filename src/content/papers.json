@@ -1,5 +1,14 @@
 [
     {
+        "tag": "journal",
+        "title": "Expropriation and Accumulation in Generative AI's Political Economy",
+        "authors": "Vinit Ravishankar, Markus Kienscherf",
+        "venue": "Capital & Class",
+        "year": 2026,
+        "url": "https://doi.org/10.1177/03098168261478525",
+        "status": "to appear"
+    },
+    {
         "tag": "conference",
         "title": "Word Order Does Matter (and Shuffled Language Models Know It)",
         "authors": "*Mostafa Abdou, *Vinit Ravishankar, Artur Kulmizev, Anders Søgaard",

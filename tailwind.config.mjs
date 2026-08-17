@@ -10,7 +10,8 @@ export default {
       colors: {
         // "highlight": "#ea5440",
         "highlight": "#E3170A",
-        "accent": "#eaeee7",
+        // "accent": "#eaeee7",
+        "accent": "#E8F1F8",
         "bg": "#ffffff",
         "fg": "#000000",
       },

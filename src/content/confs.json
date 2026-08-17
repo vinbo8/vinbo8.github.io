@@ -2,6 +2,27 @@
     {
         "type": "panel",
         "conf": "Historical Materialism",
+        "title": "Semi-peripherialisation and the data centre boom",
+        "location": "London",
+        "date": "05.11.2026"
+    },
+    {
+        "type": "panel",
+        "conf": "Cyborg Workers",
+        "title": "Digital dependency and financialisation",
+        "location": "Brussels",
+        "date": "15.10.2026"
+    },
+    {
+        "type": "talk",
+        "conf": "UNFRAME Festival",
+        "title": "Generative AI & data centre imperialism",
+        "location": "Berlin",
+        "date": "17.09.2026"
+    },
+    {
+        "type": "panel",
+        "conf": "Historical Materialism",
         "title": "Tempering the casino: social reproduction amidst the data-center boom",
         "location": "Barcelona",
         "date": "02.07.2026"

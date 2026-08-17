@@ -43,7 +43,7 @@ const now = new Date();
 
 const pastconfs = parsedconfs.filter(conf => {
   return conf.datestring <= now
-});
+}).slice(0, 3);
 
 const futureconfs = parsedconfs.filter(conf => {
   return conf.datestring > now

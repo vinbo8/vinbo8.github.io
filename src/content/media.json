@@ -15,7 +15,13 @@
         "title": "The Norwegian investment impasse",
         "publication": "The Left Berlin",
         "date": "08.09.2025",
-        "url": "https://www.theleftberlin.com/the-norwegian-investment-impasse/"
+        "url": "https://www.theleftberlin.com/the-norwegian-investment-impasse/",
+        "translations": [
+            {
+                "lang": "no",
+                "url": "https://marxisme.no/editions/01-26-beredskap/"
+            }
+        ]
     },
     {
         "title": "The rise and fall of the knowledge worker",
