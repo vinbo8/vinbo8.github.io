@@ -11,9 +11,9 @@ export default {
         // "highlight": "#ea5440",
         "highlight": "#E3170A",
         // "accent": "#eaeee7",
-        "accent": "#E8F1F8",
+        "accent": "#C3D6B8",
         "bg": "#ffffff",
-        "fg": "#000000",
+        "fg": "#1A1F16",
       },
       fontFamily: {
         title: ["Redaction", ...defaultTheme.fontFamily.serif],
