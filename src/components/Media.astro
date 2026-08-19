@@ -26,14 +26,9 @@ let parsed = media.map(m => {
           return <li class="entry">  
               <div>
                 <a href={m.url}><b>{m.title}</b></a><br>
-                <p class="text-sm">{m.publication}, {m.dateString}
-                {m.translations !== undefined && 
-                  <>
-                  <i>[{m.translations.map((tr, i) => (
-                    <>{i > 0 && ', '}<a href={tr.url} class="trans"><b>{tr.lang}</b></a></>
-                  ))}]</i>
-                  </>
-                }</p> 
+                <p class="text-sm"><i>{m.publication}</i>, {m.dateString}{m.translations !== undefined && <> (translated: {m.translations.map((tr, i) => (
+                  <>{i > 0 && ', '}<a href={tr.url} class="trans"><b>{tr.lang}</b></a></>
+                ))})</>}</p>
               </div>
           </li>
         })
